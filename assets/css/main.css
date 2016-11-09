@@ -1,0 +1,29 @@
+body {
+
+	color: black;
+}
+
+
+.contact
+{
+   background-color: #f1f1f1;
+   font-size: 18px;
+   border: 1px solid green;
+   padding: 10px
+}
+
+.contact tr td:nth-child(even) {
+  background-color: #ffffff !important;
+  border: 1px solid blue !important;
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.boldirano {
+	font-weight: bold;
+}

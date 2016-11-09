@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Angular Ninja</title>
+</head>
+
+<body>
+    <div ng-app="ninja" class="container">
+        <div ng-controller="Phonebookctrl">
+            <div class="row">
+                <div class="col-sm-8">
+                    <table class="table table-bordered table-inverse">
+                        <td class="boldirano">Ime</td>
+                        <td class="boldirano">Datum</td>
+                        <td class="boldirano">Grad</td>
+                        <td class="boldirano">Telefon</td>
+                        <td class="boldirano">Skype</td>
+                        <tr ng-repeat="x in imenik | orderBy:poredajpo">
+                            <td ng-click="open('ime')">{{ x.ime }}</td>
+                            <td ng-click="open('datum')"> {{x.datum | date:'MMM/dd/yyyy'}}
+                            </td>
+                            <td ng-click="open('grad')">{{ x.grad | uppercase}} </td>
+                            <td ng-click="open('telefon')">{{ x.telefon }}</td>
+                            <td ng-click="open('skype')">{{ x.skype }}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-sm-4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="app/index.js"></script>
+    <script type="text/javascript" src="app/phonebook/phonebook.module.js"></script>
+    <script type="text/javascript" src="app/phonebook/phonebook.ctrl.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
